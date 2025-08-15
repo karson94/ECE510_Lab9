@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/locationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location: "
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/vocText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VOC: "
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/eco2Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="eCO2: "
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/soundText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sound Level: "
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/timestampText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Timestamp: "
+        android:textSize="18sp"/>
+
+</LinearLayout>
