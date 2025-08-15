@@ -1,19 +1,22 @@
 *.iml
 .gradle
 /local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+/.idea/
+# Don't ignore the following, they should be checked into version control
+!/.idea/gradle.xml
+!/.idea/misc.xml
+!/.idea/vcs.xml
+!/.idea/compiler.xml
+!/.idea/jarRepositories.xml
+!/.idea/render.experimental.xml
+# End of files to not ignore from .idea/
+
 .DS_Store
 /build
 /captures
 .externalNativeBuild
 .cxx
-local.properties
-/app/google-services.json
-
-# Environment variables
-.env
+# /app/google-services.json # This should NOT be ignored if you use Firebase.
+ 
+ # Environment variables
+ .env
