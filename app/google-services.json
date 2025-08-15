@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "737398924931",
+    "project_id": "ece-510-lab9-ta",
+    "storage_bucket": "ece-510-lab9-ta.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737398924931:android:62827360281ea7802a5db6",
+        "android_client_info": {
+          "package_name": "com.example.ece510_exp9"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRvdcHzNGRaieywK256ZBc4ZYGRxyWHys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
