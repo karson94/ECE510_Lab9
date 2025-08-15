@@ -8,7 +8,7 @@ This project requires a Google Maps API key to function properly. Follow these s
 
 1. **Copy the template file:**
    ```bash
-   cp env.template .env
+   cp local.properties.template local.properties
    ```
 
 2. **Get your Google Maps API key:**
@@ -19,7 +19,7 @@ This project requires a Google Maps API key to function properly. Follow these s
    - Optionally, restrict the API key to your specific application
 
 3. **Add your API key:**
-   - Open the `.env` file you just created
+   - Open the `local.properties` file you just created
    - Replace `your_google_maps_api_key_here` with your actual Google Maps API key
    - Example:
      ```
@@ -27,7 +27,7 @@ This project requires a Google Maps API key to function properly. Follow these s
      ```
 
 4. **Important Security Notes:**
-   - The `.env` file is already added to `.gitignore` and will not be committed to version control
+   - The `local.properties` file is already added to `.gitignore` and will not be committed to version control
    - Never commit your actual API keys to the repository
    - Keep your API keys secure and don't share them publicly
 
