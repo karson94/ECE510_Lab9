@@ -1,11 +1,12 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
-        google()        // ✅ Essential for Firebase plugins
-        mavenCentral()  // ✅ For other dependencies
+        google()
+        mavenCentral()
     }
     dependencies {
-        classpath("com.google.gms:google-services:4.4.1") // ✅ Add this to resolve the plugin!
+        classpath("com.google.gms:google-services:4.4.1")
+        classpath("com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:1.3.0")
     }
 }
 
