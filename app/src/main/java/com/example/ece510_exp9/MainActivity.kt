@@ -134,7 +134,7 @@ fun SensorDataScreen(navController: NavController) {
 
             SensorDataItem(
                 label = "TVOC",
-                value = "${sensorData.tvoc_avg}",
+                value = "${sensorData.tvoc_avg} ppb",
                 icon = Icons.Default.Cloud,
                 valueColor = getAirQualityColor(sensorData.tvoc_avg)
             )
@@ -288,10 +288,9 @@ fun HistoryCard(data: HistoryData) {
             )
             Divider()
             HistoryDetailRow(icon = Icons.Default.CloudQueue, label = "eCO₂", value = "${data.eco2_avg} ppm")
-            HistoryDetailRow(icon = Icons.Default.Cloud, label = "TVOC", value = "${data.tvoc_avg}")
-            HistoryDetailRow(icon = Icons.Default.VolumeUp, label = "Sound", value = data.sound_level_avg.toString())
+            HistoryDetailRow(icon = Icons.Default.Cloud, label = "TVOC", value = "${data.tvoc_avg} ppb")
+            HistoryDetailRow(icon = Icons.Default.VolumeUp, label = "Sound Value", value = data.sound_level_avg.toString())
             HistoryDetailRow(icon = Icons.Default.LocationOn, label = "Location", value = "Lat: ${"%.4f".format(data.latitude)}, Lng: ${"%.4f".format(data.longitude)}")
-            HistoryDetailRow(icon = Icons.Default.Info, label = "Samples", value = data.sample_count.toString())
         }
     }
 }
