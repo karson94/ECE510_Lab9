@@ -8,6 +8,11 @@ This Android app displays real-time environmental sensor data from Firebase and 
 ```bash
 git clone [your-repo-url]
 cd ECE510_Lab9
+
+# On Windows (PowerShell/CMD):
+.\gradlew.bat :app:assembleDebug
+
+# On Linux/Mac:
 ./gradlew :app:assembleDebug
 ```
 
@@ -16,7 +21,9 @@ The app will build and run with demo data. **No special Java versions or Android
 ### 2. Setup Your API Keys
 
 **Google Maps API:**
-1. Copy the template: `cp local.properties.template local.properties`
+1. Copy the template:
+   - **Windows:** `copy local.properties.template local.properties`
+   - **Linux/Mac:** `cp local.properties.template local.properties`
 2. Get your API key from [Google Cloud Console](https://console.cloud.google.com/apis/credentials)
 3. Enable the "Maps SDK for Android" API
 4. Edit `local.properties` and replace `your_google_maps_api_key_here` with your actual key
@@ -25,13 +32,19 @@ The app will build and run with demo data. **No special Java versions or Android
 1. Create a Firebase project at [Firebase Console](https://console.firebase.google.com/)
 2. Add an Android app with package name: `com.example.ece510_exp9`
 3. Download `google-services.json` from your Firebase project
-4. Copy the template: `cp app/google-services.json.template app/google-services.json`
+4. Copy the template:
+   - **Windows:** `copy app\google-services.json.template app\google-services.json`
+   - **Linux/Mac:** `cp app/google-services.json.template app/google-services.json`
 5. Replace the placeholder values in `app/google-services.json` with your actual Firebase config
 6. Enable "Realtime Database" in your Firebase project console
 
 ### 3. Run
 Open in Android Studio or run:
 ```bash
+# On Windows (PowerShell/CMD):
+.\gradlew.bat :app:installDebug
+
+# On Linux/Mac:
 ./gradlew :app:installDebug
 ```
 
