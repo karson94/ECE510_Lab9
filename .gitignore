@@ -16,9 +16,9 @@
 /captures
 .externalNativeBuild
 .cxx
-# /app/google-services.json # This should NOT be ignored if you use Firebase.
- 
- # Environment variables
- .env
+# Firebase config files (use template instead)
+app/google-services.json
+
+# Environment variables
+.env
 local.properties
-*.json

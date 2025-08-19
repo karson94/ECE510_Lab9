@@ -1,8 +1,12 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("com.google.gms.google-services")
-    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin") version "2.0.1"
+}
+
+// Apply Google Services plugin only if google-services.json exists
+if (file("google-services.json").exists()) {
+    apply(plugin = "com.google.gms.google-services")
 }
 
 android {
@@ -38,6 +42,11 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    
+    // Enable Java toolchain for better cross-platform compatibility
+    compileOptions.apply {
+        isCoreLibraryDesugaringEnabled = true
+    }
     buildFeatures {
         compose = true
     }
@@ -49,6 +58,11 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+}
+
+// Configure secrets plugin with fallback
+secrets {
+    defaultPropertiesFileName = "local.defaults.properties"
 }
 
 dependencies {
@@ -67,6 +81,9 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    
+    // Core library desugaring for newer Java APIs on older Android versions
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
 
     // Firebase Realtime Database
     implementation("com.google.firebase:firebase-database-ktx:20.3.0")
